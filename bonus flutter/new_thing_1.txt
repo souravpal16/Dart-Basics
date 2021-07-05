@@ -1,0 +1,10 @@
+LISTVIEW WIDGET AS A CHILD OF COLUMN WIDGET.
+
+1. In flutter if you add children in column or row then the parent i.e. the column tells its 
+children that you can take as much space as you all need. My dimensions will be total sum of you lot.
+Now this is okay as long as the children have definite dimension. 
+Now suppose that we add a listview as child in column. The column again asks its child i.e. 
+listview about how much space it needs. Listview says that i will take as much space as i can get.
+and column then fumbles and is now under pressure as "as much space as i can get" means infinity.
+And hence we see the error of viewport something something. 
+A quick fix is to wrap the listview widget around expanded widget or a sizedbox.
